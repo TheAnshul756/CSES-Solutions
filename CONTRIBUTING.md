@@ -10,6 +10,16 @@ Thanks for taking the time to contribute to this repo. Following are some of the
 * **Name your code file with your username. For ex: TheAnshul756.cpp**
 * Proper naming of variables and functions is must throughout the code.
 
+### Editorial of Problems:-
+
+* Create a markdown file for editorial.
+* Try to write a clear and consice solution.
+* Write proper Proof and Justificatioion if required.
+* Place your editorial in right directory.
+* **Name your editorial file with your username. For ex: TheAnshul756.md**
+* Add link to your implimentation if required.
+* You can also add more to an existing editorial.
+
 ### How to Contribute?
 
 - Fork this Repo.

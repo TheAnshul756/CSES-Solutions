@@ -1,6 +1,6 @@
 # CSES-Solutions
 
-Solutions to all problems of [CSES](https://cses.fi/problemset/).
+Solutions and Editorials to problems of [CSES](https://cses.fi/problemset/).
 
 ## Important Note
 
@@ -8,7 +8,7 @@ Everyone is requested to either comment their code properly or use appropriate v
 
 ### What's this repo about?
 
-This repo is created to house the solutions of problems of CSES at one place. CSES contains 200 problems from beginner to advanced levels.
+This repo is created to house the solutions and editorials of problems of CSES at one place. CSES contains 200 problems from beginner to advanced levels.
 
 ### What is CSES?
 The CSES Problem Set contains a collection of competitive programming practice problems. You can access the problems [here](https://cses.fi/problemset/).
