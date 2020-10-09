@@ -8,7 +8,7 @@ using namespace std;
 typedef long long ll;
 typedef pair<int, int> pii;
 typedef vector<int> vi;
-
+//Applying KMP algo,refer web to learn more. divided into 2 chunks of code.
 vi pi(const string& s) {
     vi p(sz(s));
     rep(i,1,sz(s)) {
