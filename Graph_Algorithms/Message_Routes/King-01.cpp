@@ -29,7 +29,7 @@ using namespace std;
     Solution - 
     So in this question we have to find shortest path in an undirected graph for a destination from a source. To do these kind of problems, implementing BFS is pretty standard, and i've also done the same.
     Since the logic behind the solution is pretty simple, let's walk through the solution - 
-    1. Taking input, list of global variables defined along with their work - 
+    1. Taking input and initializing variables, list of global variables defined along with their work - 
         i.   n, m is number of vertices and edges respectively.
         ii.  Vector edge, is the adjaceny list for the graph.
         iii. vis is the array which is true, if that vertex is visited, false otherwise.
@@ -51,6 +51,7 @@ int32_t main()
 //    cin >> tests;
     while(tests--)
     {
+        // step 1 begins.
     	cin >> n >> m;
     	rep(i, 0, m)
     	{
@@ -61,6 +62,8 @@ int32_t main()
     	}
     	rep(i, 1, n+1)dist[i] = inf;
     	rep(i, 1, n+1)vis[i] = 0;
+        // step 1 ends.
+        // step 2 begins.
     	queue<int> q;
     	q.push(1);
     	dist[1] = 1;
@@ -78,6 +81,8 @@ int32_t main()
     			dist[itr] = min(dist[itr], dist[k]+1);
     		}
     	}
+        // step 2 ends.
+        // step 3 begins.
     	if(dist[n] == inf)
     	{
     		cout << "IMPOSSIBLE";
@@ -101,6 +106,7 @@ int32_t main()
     	ans.pb(node);
     	reverse(all(ans));
     	for(auto itr:ans)cout << itr << " ";
+        // step 3 ends.
     }
     return 0;
 }
