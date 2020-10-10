@@ -1,3 +1,6 @@
+#include <bits/stdc++.h>
+
+using namespace std;
 class LongestIncreasingSubsequence {
 public:
     
@@ -44,5 +47,17 @@ public:
         
         
         
+    }
+    int main()
+    {
+        int n;
+        cin >> n;
+        int tmp;
+        vector <int> nums;
+        for(int i=0;i<n;i++)
+        {
+            cin >> tmp; nums.push_back(tmp);
+        }
+        cout << lengthofLIS(nums) << endl;
     }
 };
