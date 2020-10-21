@@ -142,17 +142,17 @@ Solutions and Editorials to problems of [CSES](https://cses.fi/problemset/).
 <details><summary>Tree Algorithms</summary>
 <p>
 
- - [ ] - [Subordinates](https://cses.fi/problemset/task/1674)
+ - [x] - [Subordinates](https://cses.fi/problemset/task/1674)
  - [ ] - [Tree Matching](https://cses.fi/problemset/task/1130)
- - [ ] - [Tree Diameter](https://cses.fi/problemset/task/1131)
- - [ ] - [Tree Distances I](https://cses.fi/problemset/task/1132)
+ - [x] - [Tree Diameter](https://cses.fi/problemset/task/1131)
+ - [x] - [Tree Distances I](https://cses.fi/problemset/task/1132)
  - [ ] - [Tree Distances II](https://cses.fi/problemset/task/1133)
- - [ ] - [Company Queries I](https://cses.fi/problemset/task/1687)
- - [ ] - [Company Queries II](https://cses.fi/problemset/task/1688)
- - [ ] - [Distance Queries](https://cses.fi/problemset/task/1135)
+ - [x] - [Company Queries I](https://cses.fi/problemset/task/1687)
+ - [x] - [Company Queries II](https://cses.fi/problemset/task/1688)
+ - [x] - [Distance Queries](https://cses.fi/problemset/task/1135)
  - [ ] - [Counting Paths](https://cses.fi/problemset/task/1136)
- - [ ] - [Subtree Queries](https://cses.fi/problemset/task/1137)
- - [ ] - [Path Queries](https://cses.fi/problemset/task/1138)
+ - [x] - [Subtree Queries](https://cses.fi/problemset/task/1137)
+ - [x] - [Path Queries](https://cses.fi/problemset/task/1138)
  - [ ] - [Distinct Colors](https://cses.fi/problemset/task/1139)
 </p>
 </details>
