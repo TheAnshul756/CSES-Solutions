@@ -25,6 +25,8 @@ int main()
 	//this algo relies on that fact A^A=0
 	//in first loop,we xor all the elements except the missing one,
 	//in second loop,we xor all from 1...n , you can figure out the rest.
+	
+	//KEY CONCEPT - XOR of two equal numbers cancel each other and hence result in zero
 	cout<<xr;
 
 }
