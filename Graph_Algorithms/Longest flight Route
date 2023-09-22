@@ -1,0 +1,95 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+/*
+#include<ext/pb_ds/assoc_container.hpp>
+#include<ext/pb_ds/tree_policy.hpp>
+
+using namespace __gnu_pbds;
+typedef tree<pair<int,int>, null_type, less<pair<int,int>>, rb_tree_tag, tree_order_statistics_node_update> pbds; 
+    *A.find_by_order(ith) -> gives kth element 
+    A.order_of_key(x)  -> no. of elements lesser than x
+*/
+
+#define fastio() ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL)
+    
+#define fix(n,f) std::fixed<<std::setprecision(f)<<n
+#define ll long long 
+#define all(v) v.begin(),v.end()
+#define nl "\n"
+#define sum(a,b,m) ((a%m)+(b%m))%m
+#define pro(a,b,m) ((a%m)*(b%m))%m
+#define diff(a,b,m) ((a%m)-(b%m)+m)%m
+
+
+/*============================                  ░██████╗░██████╗░              ========================*/
+/*============================                 ██╔════╝░██╔══██╗               =======================*/
+/*============================                 ██║░░██╗░██║░░██║               =======================*/
+/*============================                 ██║░░╚██╗██║░░██║               =======================*/
+/*============================                 ╚██████╔╝██████╔╝               =======================*/
+/*============================                 ░╚═════╝░╚═════╝░               =======================*/
+ 
+/*                                  Before Solving the Problem:
+
+#  Read each and every word carefully 
+1. Dry run testcases , with pen -paper
+2. Don't forget the simplest tests
+3. Stay calm & keep code on
+*/
+
+/*======================== =========== I Bow to Lord Shiva  =================================*/
+#define mod 1000000007
+
+void solve(){
+    ll n,m;
+    cin>>n>>m;
+    vector<vector<pair<ll,ll>>> g(n+1);
+    while(m--){
+        ll u,v,w;cin>>u>>v>>w;
+        g[u].push_back({v,w});
+    }
+    vector<ll> dist(n+1,1e18);
+    vector<ll> ways(n+1,0);
+    vector<ll> minedges(n+1,LONG_LONG_MAX);
+    vector<ll> maxedges(n+1,LONG_LONG_MIN);
+    dist[1]=0;
+    ways[1]=1;
+    minedges[1]=0;
+    maxedges[1]=0;
+    priority_queue<pair<ll,ll>> pq;
+    pq.push({0,1});
+    while(pq.empty()==false){
+        auto p=pq.top();
+        pq.pop();
+        if(dist[p.second]!=-p.first){
+            continue;
+        }
+        ll node=p.second;
+        for(auto &r:g[node]){
+            if(dist[node]+r.second<dist[r.first]){
+                dist[r.first]=dist[node]+r.second;
+                ways[r.first]=ways[node];
+                minedges[r.first]=1+minedges[node];
+                maxedges[r.first]=1+maxedges[node];
+                pq.push({-dist[r.first],r.first});
+            }
+            else if(dist[node]+r.second==dist[r.first]){
+                ways[r.first]=sum(ways[r.first],ways[node],mod);
+                minedges[r.first]=min(minedges[r.first],1+minedges[node]);
+                maxedges[r.first]=max(maxedges[r.first],1+maxedges[node]);
+            }
+        }
+    }
+    cout<<dist[n]<<" "<<ways[n]<<" "<<minedges[n]<<" "<<maxedges[n]<<nl;
+}
+
+int main(){
+    fastio();
+    //freopen("input.txt", "r" ,stdin);
+    //freopen("output.txt", "w" ,stdout);
+    int t=1;
+    //cin>>t;
+    for(int t1=1;t1<=t;t1++){
+        solve();
+    }
+}
